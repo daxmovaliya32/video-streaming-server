@@ -1,19 +1,14 @@
 import './App.css';
-import { useState } from 'react';
-import VideoPlayer from './components/videoplayer';
+import VideoPlay from './pages/videplay';
+import VideoUpload from './pages/videoupload';
 
 function App() {
-  const [videoId,setVideoId]=useState(null);
-  function plyvideo(e,videoId)
-  {
-    e.preventDefault()
-    setVideoId(videoId)
-  }
   return (
-    <div className="App">
-     {videoId && <VideoPlayer videoId={videoId}></VideoPlayer>}<br />
-     <button onClick={(e)=>{plyvideo(e,'vid1')}}>plyvideo1</button>
-     <button onClick={(e)=>{plyvideo(e,'vid2')}}>plyvideo2</button>
+    <div className="App"> 
+    <Routes>  
+       <Route path="/videoplay" element={<VideoPlay/>} exact/>
+       <Route path="/" element={<VideoUpload/>} />
+    </Routes>
     </div>
   );
 }

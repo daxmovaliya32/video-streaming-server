@@ -1,14 +1,17 @@
 import './App.css';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import VideoPlay from './pages/videplay';
-import VideoUpload from './pages/videoupload';
+import VideoUploads from './pages/videoupload';
 
 function App() {
   return (
     <div className="App"> 
-    <Routes>  
-       <Route path="/videoplay" element={<VideoPlay/>} exact/>
-       <Route path="/" element={<VideoUpload/>} />
-    </Routes>
+    <BrowserRouter>
+    <Routes>
+       <Route path="/videoupload" element={<VideoPlay/>} exact/>
+      <Route path="/" element={<VideoUploads width={400} height={300}/>} />
+       </Routes>
+    </BrowserRouter> 
     </div>
   );
 }

@@ -2,7 +2,7 @@
   "name": "video_stream_frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy":{ "/api": { "target": "https://localhost:4000", "secure": false } },
+  "proxy":"https://localhost:4000",
   
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

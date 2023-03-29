@@ -17,7 +17,7 @@ const VideoUpload = () => {
     formdata.append("name", name); 
     formdata.append("desc", desc); 
     console.log(formdata);
-    axios.post("/upload/videos",formdata)
+    axios.post("upload/videos",formdata)
       .then((success) => {
         console.log(success);
         alert(success);
@@ -25,11 +25,11 @@ const VideoUpload = () => {
       }) 
       .catch((error) => {
         console.log(error);
-        alert("Error happened!");
+        alert(error.message);
       });
   };
 
-  return (
+  return ( 
     <>
       <form onSubmit={hadleSubmit}>
         <div className="form-group">

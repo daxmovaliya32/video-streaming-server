@@ -24,7 +24,7 @@ router.post('/upload/videos',async(req,res)=>{
     {
       console.log(error);
     }
-   
+     console.log(files);
     cloudinary.uploader.upload_large(files.videos0.filepath,{public_id:files.videos0.originalFilename},
       function(err,result) 
       {

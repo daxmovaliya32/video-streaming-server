@@ -14,6 +14,8 @@ const videoplay = require("./routes/videoplayer")
 app.use(videoplay);
 const videoupload = require("./routes/uploadvideo");    
 app.use(videoupload);
+const getvideo = require("./routes/getvideos");    
+app.use(getvideo);
 
 app.listen(process.env.PORT,()=>{
     console.log(`server running on port number ${process.env.PORT}`);

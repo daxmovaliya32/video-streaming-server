@@ -1,7 +1,7 @@
 import React from 'react'
 import VideoUpload from '../components/videoupload'
 
-const VideoUploads = (props) => {
+const VideoUploads = () => {
   return (
     <div className='raw'>
     <div className='col-md-6'>

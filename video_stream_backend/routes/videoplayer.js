@@ -7,6 +7,7 @@ const videofilemap={
     'vid2':'./videos/vid2.mp4'
 }
 
+//its only for how streaming work and how video stream byte by byte using createReadStream
 router.get('/videos/:videoid',(req,res)=>{
 const filename = req.params.videoid;
 const filepath= videofilemap[filename];

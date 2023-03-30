@@ -15,6 +15,7 @@ const Getvideospage = () => {
               border: "1px solid black",
             }}
           >
+          <h1>all videos</h1>
             <div className="card-body">
               <GetVideo/>
             </div>
